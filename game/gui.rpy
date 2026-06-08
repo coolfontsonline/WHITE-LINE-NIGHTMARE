@@ -14,10 +14,10 @@ init python:
 ## Enable checks for invalid or unstable properties in screens or transforms
 define config.check_conflicting_properties = True
 
-
 ################################################################################
 ## GUI Configuration Variables
 ################################################################################
+
 
 
 ## Colors ######################################################################
