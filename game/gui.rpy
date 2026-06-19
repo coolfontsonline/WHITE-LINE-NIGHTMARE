@@ -187,7 +187,7 @@ define gui.confirm_button_text_xalign = 0.5
 define gui.page_button_borders = Borders(12, 5, 12, 5)
 
 define gui.quick_button_borders = Borders(12, 5, 12, 0)
-define gui.quick_button_text_font = "SourceCodePro-Regular.ttf"
+define gui.quick_button_text_font = "fonts/SourceCodePro-Regular.ttf"
 define gui.quick_button_text_size = 20
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
