@@ -67,19 +67,19 @@ define gui.interface_text_font = "DavidLibre-Regular.ttf"
 define gui.text_size = 25
 
 ## The size of character names.
-define gui.name_text_size = 34
+define gui.name_text_size = 45
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 25
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 27
+define gui.label_text_size = 34
 
 ## The size of text on the notify screen.
-define gui.notify_text_size = 18
+define gui.notify_text_size = 34
 
 ## The size of the game's title.
-define gui.title_text_size = 57
+define gui.title_text_size = 70
 
 
 ## Main and Game Menus #########################################################
@@ -187,7 +187,8 @@ define gui.confirm_button_text_xalign = 0.5
 define gui.page_button_borders = Borders(12, 5, 12, 5)
 
 define gui.quick_button_borders = Borders(12, 5, 12, 0)
-define gui.quick_button_text_size = 16
+define gui.quick_button_text_font = "SourceCodePro-Regular.ttf"
+define gui.quick_button_text_size = 20
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 
