@@ -1,4 +1,6 @@
-﻿## This file contains options that can be changed to customize your game.
+﻿##adding a line here just to test github desktop lol
+
+## This file contains options that can be changed to customize your game.
 ##
 ## Lines beginning with two '#' marks are comments, and you shouldn't uncomment
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
