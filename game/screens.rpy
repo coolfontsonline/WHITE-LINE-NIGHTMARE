@@ -114,7 +114,7 @@ screen say(who, what):
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
     if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
+        add SideImage() xalign 0.0 yalign 1.0 xoffset 30 yoffset -30
 
 
 ## Make the namebox available for styling through the Character object.
@@ -375,6 +375,7 @@ screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
+
             text "[config.version]":
                 style "main_menu_version"
 
@@ -501,7 +502,7 @@ style game_menu_outer_frame:
     bottom_padding 34
     top_padding 135
 
-    background "gui/overlay/game_menu.png"
+    background "gui/overlay/main_menu.png"
 
 style game_menu_navigation_frame:
     xsize 315
