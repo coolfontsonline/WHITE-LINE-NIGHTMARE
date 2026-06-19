@@ -252,7 +252,7 @@ screen quick_menu():
 
             xalign 0.1
             yalign 0.0
-            yoffset 20
+            yoffset 25
 
             textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')

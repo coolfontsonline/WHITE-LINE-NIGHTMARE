@@ -3,11 +3,13 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define mag = Character("Maggie", image="mag")
-define mour = Character("Mourgan", image="mour")
+define mag = Character("Maggie", image="mag", who_color="#228047")
+define mour = Character("Mourgan", image="mour" , who_color="#733294")
 
 image mag talk = "maggie-talksprite.png"
 image mour talk = "mourgan-talksprite.png"
+image mag pfp = "maggie-talksprite.png"
+image mour pfp = "mourgan-talksprite.png"
 
 image side mag talk = im.Scale("side-maggie-talksprite.png", 256, 256)
 image side mour talk = im.Scale("side-mourgan-talksprite.png", 256, 256)
@@ -40,6 +42,14 @@ label start:
     "Well-to-do freaks kissing their wives with eyes wide open before bed every night. Dead ends for suburbanites who never wanted anything more than nothing."
     "Maggie white knuckles the steering wheel, studded armbands tighten around her wrists."
     "Eight hours and we'll be back in Pittsburgh."
+
+    show mag pfp
+
+    mag "I'm here, beautiful. wya?"
+
+    show mour pfp
+
+    mour "sdlkjjfhweui hold on holdon holdon AaaAA"
 
     show mag talk
     show car:
