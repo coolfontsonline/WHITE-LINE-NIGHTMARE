@@ -4,6 +4,7 @@
 # name of the character.
 
 define mag = Character("Maggie", image="mag", who_color="#228047")
+define magthink = Character("Maggie", image="mag", who_color="#228047", what_color="#2D50C4")
 define mour = Character("Mourgan", image="mour" , who_color="#733294")
 define rot = Character("Rotwife383927", image="rot", who_color="#228047")
 define kit = Character("kittysockz", image="kit", who_color="#733294")
@@ -46,6 +47,8 @@ label start:
     "Well-to-do WASPS kissing their wives with eyes wide open before bed every night. Dead ends for suburbanites who never wanted anything more than nothing."
     "Maggie white knuckles the steering wheel, studded armbands tighten around her wrists."
     "Eight hours and we'll be back in Pittsburgh."
+    "538. This is it."
+    "Maggie picks up the phone sitting in her lap."
 
     show rot pfp
 
@@ -61,15 +64,44 @@ label start:
 
     "..."
 
+    "A soft pitter pattering rapidly approaches the orate glass and oak wood door."
+
+    show mour talk
+
+    mour "MAGGIIIIEEEE!!!"
+
+    "The short woman flings herself into Maggie's soft arms. Maggie catches her easily, holding Mourgan tightly against her leather jacket."
+
+    "The two settle and recede into quiet joy, holding eachother for a momentary eternity."
+
     show mag talk
+
+    mag "I know you're excited but we gotta pack up."
+
+    magthink "If we get held up too long im gonna pass the fuck out. Way too early for me right now."
+
+    mour "don't worry, i got all my stuff ready by the door."
+
+    mag "What, just like that?"
+
+    mour "my computer, my clothes, my backpack filled with necessities, that's it."
+
+    mag "Shit, you really do live light. Alright let's pack it in and go."
+
+    mour "ok, love."
+
+    "She gives Maggie a peck on the cheek. Maggie reciporicates with another. The two hold eachother before making a break, shuffling past one another to load Mourgan's life into the small gray hatchback."
+
+    "Slam the trunk shut, both hands shifting into Drive."
+
+    magthink "You hear that, motherfuckers? She's all mine now."
+
     show car:
         pos(50, 125)
 
     # These display lines of dialogue.
 
     mag "You've created a new Ren'Py game."
-
-    show mour talk
 
     mour "Once you add a story, pictures, and music, you can release it to the world!"
 
