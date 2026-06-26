@@ -34,6 +34,8 @@ label start:
 
     scene bg road
 
+    play music "Driving.ogg"
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -45,7 +47,7 @@ label start:
     "Maggie's hatchback rushes down a Too Clean suburban stroad. Tacky houses and trees unsuited for this dry, humid climate pass her by."
     "All these lawns and freshly planted oaks. Artificial life supported supping from misappropriated mana."
     "This is not kind territory. The plastic facade of white-fence ignorance stapled over seething hatred of the incompatible."
-    "All Maggie needs to do is pick up Mourgan, load all her stuff in this tiny 3 door shitbox and fuck off before her parents wake up."
+    "All Maggie needs to do is pick up Mourgan, load all her stuff in this tiny 3 door shitbox and fuck off."
     "...And try not to think about all the ways she's gonna turn her girlfriend into soaking wet pleasuremush between now and the time they get home."
     "Her mind swirls with rage. Roiling against the soybean and hog infected Southern Illinois New Home Developments."
     "\"Minnow Creek - A Safe, Stable Community\"\n For you, maybe."
@@ -54,10 +56,14 @@ label start:
     "Maggie white knuckles the steering wheel, studded armbands tighten around her wrists."
     "Eight hours and we'll be back in Pittsburgh."
 
+    play music "Outside.ogg"
+
     show rot pfp
 
     show door:
         pos(970, 200)
+
+    play sound "dooropen.wav"
 
     rot "I'm here, beautiful. wya?"
 
@@ -133,9 +139,7 @@ label start:
 
     mour "yknow, its still unbelievable to me that we're here now. finally in the same car."
 
-
     mag "Yeah. Im glad I logged in that day. You are as pretty as your character, too."
-
 
     mour "eeeeeeee. yayayay I've heard you say it before, hehe."
 
