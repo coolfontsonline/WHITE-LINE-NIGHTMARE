@@ -34,7 +34,7 @@ label start:
 
     scene bg road
 
-    play music "Driving.ogg"
+    play music "driving.ogg"
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -56,7 +56,7 @@ label start:
     "Maggie white knuckles the steering wheel, studded armbands tighten around her wrists."
     "Eight hours and we'll be back in Pittsburgh."
 
-    play music "Outside.ogg"
+    play music "outside.ogg"
 
     show rot pfp
 
@@ -136,6 +136,8 @@ label start:
     show car:
         pos(50, 125)
     with dissolve
+
+    play music "driving.ogg"
 
     mour "yknow, its still unbelievable to me that we're here now. finally in the same car."
 
