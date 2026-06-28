@@ -3,9 +3,24 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define mag = Character("Maggie", image="mag", who_color="#228047")
-define magthink = Character("Maggie", image="mag", who_color="#228047", what_color="#2D50C4")
-define mour = Character("Mourgan", image="mour" , who_color="#733294")
+init python:
+#TEXT BLIPS
+    def magtext(event, **kwargs):
+        if event == "show":
+             renpy.sound.play("audio/mablip.ogg", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.sound.stop(channel="sound")
+
+    def mourtext(event, **kwargs):
+        if event == "show":
+            renpy.sound.play("audio/moblip.ogg", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.sound.stop(channel="sound")
+
+
+define mag = Character("Maggie", image="mag", who_color="#228047", callback=magtext)
+define magthink = Character("Maggie", image="mag", who_color="#228047", what_color="#2D50C4",)
+define mour = Character("Mourgan", image="mour" , who_color="#733294", callback=mourtext)
 define rot = Character("Rotwife383927", image="rot", who_color="#228047")
 define kit = Character("kittysockz", image="kit", who_color="#733294")
 
@@ -24,6 +39,9 @@ image car = "bg-car"
 image door = "bg-mourgan-door"
 image trunk = "img-car-trunk"
 image backroad = "bg-car-interior-backroad"
+image wow1 = "bg-wow-memory"
+image wow2 = "bg-wow-steamy"
+image raymond1 ="img-raymond-normal"
 
 # The game starts here.
 
@@ -36,6 +54,8 @@ label start:
     show backroad:
         pos (130,130)
     with dissolve
+
+    # OPENING MONOLOGUE
 
     "Maggie's hatchback rushes down a Too Clean suburban stroad. Tacky houses and trees unsuited for this dry, humid climate pass her by."
     "All these lawns and freshly planted oaks. Artificial life supported supping from misappropriated mana."
@@ -50,6 +70,8 @@ label start:
     "Eight hours and we'll be back in Pittsburgh."
     "538. This is it."
     "Maggie picks up the phone sitting in her lap."
+
+    #MAGGIE ARRIVES AT MOURGAN'S HOUSE
 
     play music "outside.ogg"
 
@@ -90,22 +112,11 @@ label start:
 
     mour "don't worry, i got all my stuff ready by the door."
 
-    mag "What, just like that?"
 
-    mour "my computer, my clothes, my backpack filled with necessities, that's it."
 
-    mag "Shit, you really do live light. Alright let's pack it in and go."
+    # THEY PACK INTO THE CAR
 
-    mour "ok, love."
-
-    "She gives Maggie a peck on the cheek. Maggie reciporicates with another. The two hold eachother before making a break, shuffling past one another to load Mourgan's life into the small gray hatchback."
-
-    "Slam the trunk shut, both hands shifting into Drive."
-
-    magthink "You hear that, motherfuckers? She's all mine now."
-
-    show car:
-        pos(50, 125)
+    hide backroad
 
     mag "Shit, is that really all your stuff?"
 
@@ -135,17 +146,18 @@ label start:
 
     mour "everything is good about you."
 
-    "Maggie blushes, and grips Mourgan harder."
-
-    "The two kiss."
+    "She gives Maggie a peck on the cheek. Maggie reciporicates with another. The two hug tightly before making a break, shuffling past one another to load Mourgan's life into the small gray hatchback."
 
     mag "Lets get out of here."
 
-    "They load into the car, jack the phone into the holster, and with the push of a button they set the engine alight."
+    play sound "doorclose.wav"
+
+    "Maggie slams the doors shut, jacks the phone into the holster, and with the push of a button they set the engine alight."
 
     "Maggie places her hand over the shifter, ready to set the car to Drive. Mourgan places her hand on top of Maggie's. Fingers interlocking atop the mechanism that binds them."
 
-    mag "Let's go."
+    magthink "You hear that, motherfuckers? She's all mine now."
+
 
     hide trunk
     with dissolve
@@ -155,6 +167,8 @@ label start:
     show car:
         pos(50, 125)
     with dissolve
+
+    #MAGGIE AND MOURGAN DRIVING, REMINISCING.
 
     play music "driving.ogg"
 
@@ -174,11 +188,16 @@ label start:
 
     mag "Someone can't handle a compliment. Come onnn."
 
+    play sound "thud.ogg"
+
     "Mourgan winces and jabs Maggie in the side with her elbow"
 
     mag "Hey!"
 
     mag "..."
+
+    show wow1: 
+        pos (820,300)
 
     mag "Really though, what are the odds of striking up a conversation with someone advertising a goth party in main chat like that though?"
 
@@ -216,11 +235,11 @@ label start:
 
     mour "right, right."
 
-    "mour twiddles with a pastel plush keychain between her soft fingers."
+    "Mourgan twiddles with a pastel plush keychain between her soft fingers."
 
     mour "you know i love you."
 
-    "Maggie softens, arms lessening their linkage between the wheel and her shoulders."
+    "Maggie softens, arms releasing tension-linkage between the wheel and her shoulders."
 
     mag "You're right, I do. I love you too, Mourgan."
 
@@ -236,6 +255,9 @@ label start:
 
     "Mourgan swallows a pill nonexistent."
 
+    hide wow1
+    with dissolve
+
     "Maggie looks away from the road for a second and shoots a confident glance to Mourgan."
 
     mag "Hey at least this shit got us the money to get you out of your parents place."
@@ -243,6 +265,9 @@ label start:
     mour "you ruined my perfect towwwwn!"
 
     mag "Who cares about the stupid cat island, there's no fucking shot that shitass villager was actually worth $700"
+
+    show raymond1:
+        pos(500,100)
 
     mag "You seize the moment and capitalize on it. I'm worth more than a bunch of pixels right?"
 
