@@ -29,7 +29,16 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""Hello! Thank you for downloading to WHITE LINE NIGHTMARE! This game was made by Harmful Park, Cool Fonts Online, Rist_5, and Littlebeats with additional help from our friend Game & Burger!
+
+Director - Harmful Park
+
+Art & Photography - Harmful Park & CoolFonts Online
+
+Sound - Harmful Park Rist_5
+
+Writing - Rist_5, Littlebeats, Harmful Park
+
 """)
 
 

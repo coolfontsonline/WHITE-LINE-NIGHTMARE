@@ -289,6 +289,48 @@ label start:
 
     "Maggie rolls her eyes"
 
-    # This ends the game.
+    # DINER SCENE
+
+
+    # FLASHBACKS
+
+
+    # DINER SCENE 2
+
+
+    #SECOND ROAD CONVERSATION
+
+
+    #ARGUEMENT
+
+
+    #FLASHBACK
+
+
+    #THIRD ROAD CONVERSATION
+
+
+    #GAS STATION SCENE
+
+
+    #PRELUDE TO ROAD HEAD
+
+
+    #ROAD HEAD
+
+
+    #AFTERMATH OF ROAD HEAD
+
+
+    #FINAL ARGUEMENT
+
+
+    #MAGGIE CRASHES THE CAR
+
+
+    #ENDING
+
+    hide road
+    with dissolve
 
     return
