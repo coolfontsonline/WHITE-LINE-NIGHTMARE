@@ -26,7 +26,7 @@ init python:
 define gui.accent_color = u'#cccc00'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = u'#888888'
+define gui.idle_color = u'#b8b8ad'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
@@ -40,7 +40,7 @@ define gui.hover_color = u'#e0e066'
 define gui.selected_color = u'#ffffff'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = u'#8888887f'
+define gui.insensitive_color = u'#adadb0'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
@@ -61,7 +61,7 @@ define gui.text_font = "fonts/SourceCodePro-Regular.ttf"
 define gui.name_text_font = "fonts/DavidLibre-Bold.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/DavidLibre-Regular.ttf"
+define gui.interface_text_font = "fonts/OCHighwayVAR2-Series7.otf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 25
@@ -70,16 +70,16 @@ define gui.text_size = 25
 define gui.name_text_size = 45
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 25
+define gui.interface_text_size = 30
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 34
+define gui.label_text_size = 25
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 34
 
 ## The size of the game's title.
-define gui.title_text_size = 70
+define gui.title_text_size = 50
 
 
 ## Main and Game Menus #########################################################

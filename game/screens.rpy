@@ -22,8 +22,8 @@ style hyperlink_text:
     hover_underline True
 
 style gui_text:
+    outlines [ (1, "#222322",0 ,0)]
     properties gui.text_properties("interface")
-
 
 style button:
     properties gui.button_properties("button")
@@ -410,6 +410,8 @@ style main_menu_version:
     properties gui.text_properties("version")
 
 
+
+
 ## Game Menu screen ############################################################
 ##
 ## This lays out the basic common structure of a game menu screen. It's called
@@ -510,9 +512,9 @@ style game_menu_navigation_frame:
     yfill True
 
 style game_menu_content_frame:
-    left_margin 45
+    left_margin 95
     right_margin 23
-    top_margin 12
+    top_margin 80
 
 style game_menu_viewport:
     xsize 1035
@@ -524,8 +526,10 @@ style game_menu_side:
     spacing 12
 
 style game_menu_label:
-    xpos 57
+    xpos 37
     ysize 135
+    top_margin 50
+    
 
 style game_menu_label_text:
     size gui.title_text_size
@@ -556,6 +560,8 @@ screen about():
 
         style_prefix "about"
 
+
+
         vbox:
 
             label "[config.name!t]"
@@ -567,6 +573,11 @@ screen about():
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
+style about_frame:
+    xsize 315
+    yfill True
+
+    background "gui/overlay/about.png"
 
 style about_label is gui_label
 style about_label_text is gui_label_text
@@ -574,6 +585,8 @@ style about_text is gui_text
 
 style about_label_text:
     size gui.label_text_size
+
+
 
 
 ## Load and Save screens #######################################################
@@ -1285,6 +1298,7 @@ style notify_frame:
 
 style notify_text:
     properties gui.text_properties("notify")
+    
 
 
 ## NVL screen ##################################################################
