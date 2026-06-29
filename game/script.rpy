@@ -1,7 +1,20 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+image splash = "splash.png"
+
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    play sound "splash.wav"
+
+    show splash with dissolve
+    with Pause(3)
+
+    scene black with dissolve
+    with Pause(1)
+
+    return
 
 init python:
 #TEXT BLIPS
@@ -158,7 +171,6 @@ label start:
 
     magthink "You hear that, motherfuckers? She's all mine now."
 
-
     hide trunk
     with dissolve
     hide door
@@ -277,13 +289,13 @@ label start:
 
     mour "it's not about that. The whole balance is off. Guh. I'm hitting Hazel as much as I can."
 
-    mour "ankha, bob, monique, tom, cranky, mitzi, kid cat, purrl, lolly and HAZEL??? Lkdfjgevc"
+    mour "ankha, bob, monique, tom, cranky, mitzi, kid cat, purrl, lolly and HAZEL??? lkdfjgevc"
 
     mour "kys kys kys"
 
     mag "Jesus Christ you're serious about this shit."
 
-    mour "Yeah im a gremlin, you're bringing a twisted gender gremlin into your home."
+    mour "yeah im a gremlin, you're bringing a twisted gender gremlin into your home."
 
     mag "Looking forward to it"
 
