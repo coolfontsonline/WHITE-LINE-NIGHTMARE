@@ -422,7 +422,7 @@ screen main_menu():
         style "main_menu_frame"
     
     style_prefix "main_menu"
-
+    
     add TrackCursor("gui/main_menu.png",30):
         xzoom 1.05
         xoffset -40

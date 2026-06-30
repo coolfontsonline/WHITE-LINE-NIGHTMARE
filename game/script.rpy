@@ -20,7 +20,7 @@ init python:
 #TEXT BLIPS
     def magtext(event, **kwargs):
         if event == "show":
-             renpy.sound.play("audio/mablip.ogg", channel="sound", loop=True)
+            renpy.sound.play("audio/mablip.ogg", channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.sound.stop(channel="sound")
 
@@ -36,6 +36,7 @@ define magthink = Character("Maggie", image="mag", who_color="#228047", what_col
 define mour = Character("Mourgan", image="mour" , who_color="#733294", callback=mourtext)
 define rot = Character("Rotwife383927", image="rot", who_color="#228047")
 define kit = Character("kittysockz", image="kit", who_color="#733294")
+define trucker =Character("Trucker", image="", who_color="#3727c0")
 
 image mag talk = "maggie-talksprite.png"
 image mour talk = "mourgan-talksprite.png"
@@ -265,6 +266,8 @@ label start:
 
     mag "Yeah the world and its conditions is making me feel real special right now. Feels real nice having everyone else suffer like me for once."
 
+    mag ""
+
     "Mourgan swallows a pill nonexistent."
 
     hide wow1
@@ -338,9 +341,68 @@ label start:
 
 
     #MAGGIE CRASHES THE CAR
-
+    label crash:
+        mag "STOP FUCKING HITTING ME."
+    mour  "I HATE YOU I HATE YOU I HATE YOU I HATE YOU."
+    mag "SHIT!"
+    mour "I HATE- {cps=1} {/cps}{nw}"
+        play sound "squeal.ogg"
+    "For a moment it was bathed in light. {w=2.0}"
+    "Animal bone colliding with aluminum and glass, the heaven-sent ungulate craters into the engine bay."
+    "The horns breach the windshield, muscles streak the hood. Parts of the animal ski flightedly past the vehicle on all sides."
+    "............"
+    "................................."
+    "......................................................."
+    mag "Mmm."
+    "A jostling. Leaf springs creak metal on metal."
+    "The two are in the back of another car. Adrenalinedly maneuvering through the post-crash motions. They fell into a daze some time ago."
+    trucker "............."
+    mag ".............."
+    mour " ............."
+    trucker "Yknow it was good timing when you called me. There usually aren't any other cars for miles on this road this late. Heck, Im only here because there was another crash about two hours off my usual route."
+    trucker "Bit of a pain to go out that far, but you don't get to complain about those sorts of things in this line of work y'know?"
+    mag ".............."
+    mour "............."
+    trucker "............."
+    trucker "It might not be any of my business, but yall wouldnt happen to be tra-"
+    mag "Do you have to talk to us the whole way there?"
+    trucker "Sorry, brother."
+    "It's just after 10:00 PM."
+    mag "......."
 
     #ENDING
+
+    "The two are taken to a nearby auto shop, and take a lengthy uber back home. Despite the strain and coordination of moving Mourgan's stuff to a new car, the two don't speak a word to eachother."
+    mag "It's the apartment right there."
+    "Mourgan rouses from deep thought."
+    mour "....huh?"
+    mag "My place? It's on the second floor all the way down."
+    mour "Oh.. right."
+    play sound "dooropen.wav"
+    "The two lazily breach the car, each carrying Mourgan's stuff out of the van."
+    "It doesn't take much effort between the two of them."
+    play sound "doorclose.wav"
+    "They make their way to the shadowy apartment door. Maggie fishes for her keys for while before opening the lock."
+    "Before turning the tumbler she stares at Mourgan. She's staring at the ground."
+    "Mourgan grits her teeth. She winces. Each step up Maggie's stairs pushing inward on her lungs, her brain, her muscles. Her computer counterbalances heavy on her spine."
+    "The two open the shabby white door into Maggie's apartment."
+    "The home is sparsely decorated. A dim plastic floor lamp reveals yellowed mounting tape, dusty floors, and crackling paint."
+    mag "I guess you can just put your stuff wherever for now. The bedroom is on the left."
+    mour "Maggie?"
+    mag "Yeah?"
+    mour "Im gonna sleep on the couch tonight if thats alright."
+    mag "Oh... okay."
+    mag "...."
+    "Maggie grimaces. She looks up at Mourgans face. Seeking remnant affection."
+    "Maggie grimaces again. Now turning away. She stares at the plastic laminate flooring."
+    mag "Im sorry..."
+    "Mourgan stares up at Maggie with a look of pure scorn."
+    mag "Fine. be that way, fuck you."
+    "Maggie walks into her bedroom and slams the door."
+    "Mourgan sets her pillow on the couch."
+    "And stands above the long gray loveseat."
+    "........"
+    "She makes her way out of the house and slams the door shut behind her. Into the hilly dilapidated streets."
 
     hide road
     with dissolve
