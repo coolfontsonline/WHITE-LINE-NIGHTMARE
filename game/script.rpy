@@ -6,7 +6,7 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    play sound "splash.wav"
+    play sound "audio/splash.wav"
 
     show splash with dissolve
     with Pause(3)
