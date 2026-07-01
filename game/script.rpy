@@ -36,19 +36,27 @@ define magthink = Character("Maggie", image="mag", who_color="#228047", what_col
 define mour = Character("Mourgan", image="mour" , who_color="#733294", callback=mourtext)
 define rot = Character("Rotwife383927", image="rot", who_color="#228047")
 define kit = Character("kittysockz", image="kit", who_color="#733294")
-define trucker =Character("Trucker", image="", who_color="#3727c0")
+define trucker =Character("Trucker", image="trucker", who_color="#3727c0")
 
 image mag talk = "maggie-talksprite.png"
 image mour talk = "mourgan-talksprite.png"
 image rot pfp = "maggie-talksprite.png"
 image kit pfp = "mourgan-talksprite.png"
+image trucker talk = "trucker-talksprite.png"
 
 image side mag talk = im.Scale("side-maggie-talksprite.png", 256, 256)
 image side mour talk = im.Scale("side-mourgan-talksprite.png", 256, 256)
 image side rot pfp = im.Scale("side-maggie-pfp.png", 256, 256)
 image side kit pfp = im.Scale("side-mourgan-pfp.png", 256, 256)
+image side trucker talk = im.Scale("side-trucker-talksprite.png", 256, 256)
 
-image bg road = Tile("bg-road.jpg")
+image bg road1 = Tile("bg-road.jpg")
+image bg road2 = Tile("bg-road2.jpg")
+image bg road3 = Tile("bg-road3.jpg")
+image bg road4 = Tile("bg-road4.jpg")
+image bg carpet = Tile("bg-carpet1.jpg")
+image bg tile = Tile("bg-tile1.jpg")
+
 image car = "bg-car"
 image door = "bg-mourgan-door"
 image trunk = "img-car-trunk"
@@ -56,12 +64,13 @@ image backroad = "bg-car-interior-backroad"
 image wow1 = "bg-wow-memory"
 image wow2 = "bg-wow-steamy"
 image raymond1 ="img-raymond-normal"
+image truckercab = "bg-trucker"
 
 # The game starts here.
 
 label start:
 
-    scene bg road
+    scene bg road1
 
     play music "driving.ogg"
 
@@ -339,25 +348,36 @@ label start:
 
     #FINAL ARGUEMENT
 
+    scene bg road4
+
 
     #MAGGIE CRASHES THE CAR
+    show mag talk
     label crash:
         mag "STOP FUCKING HITTING ME."
+    show mour talk
+    
     mour  "I HATE YOU I HATE YOU I HATE YOU I HATE YOU."
     mag "SHIT!"
     mour "I HATE- {cps=1} {/cps}{nw}"
-        play sound "squeal.ogg"
+    play sound "squeal.ogg"
+    stop music 
     "For a moment it was bathed in light. {w=2.0}"
     "Animal bone colliding with aluminum and glass, the heaven-sent ungulate craters into the engine bay."
     "The horns breach the windshield, muscles streak the hood. Parts of the animal ski flightedly past the vehicle on all sides."
     "............"
     "................................."
     "......................................................."
+    play music "driving.ogg" fadein 3.0
+    show truckercab: 
+        pos(570, 200)
     mag "Mmm."
     "A jostling. Leaf springs creak metal on metal."
     "The two are in the back of another car. Adrenalinedly maneuvering through the post-crash motions. They fell into a daze some time ago."
+    show trucker talk
     trucker "............."
     mag ".............."
+
     mour " ............."
     trucker "Yknow it was good timing when you called me. There usually aren't any other cars for miles on this road this late. Heck, Im only here because there was another crash about two hours off my usual route."
     trucker "Bit of a pain to go out that far, but you don't get to complain about those sorts of things in this line of work y'know?"
@@ -369,6 +389,8 @@ label start:
     trucker "Sorry, brother."
     "It's just after 10:00 PM."
     mag "......."
+    hide truckercab
+    with dissolve
 
     #ENDING
 
@@ -381,7 +403,8 @@ label start:
     play sound "dooropen.wav"
     "The two lazily breach the car, each carrying Mourgan's stuff out of the van."
     "It doesn't take much effort between the two of them."
-    play sound "doorclose.wav"
+    play sound "doorclose.wav"  
+    scene bg carpet
     "They make their way to the shadowy apartment door. Maggie fishes for her keys for while before opening the lock."
     "Before turning the tumbler she stares at Mourgan. She's staring at the ground."
     "Mourgan grits her teeth. She winces. Each step up Maggie's stairs pushing inward on her lungs, her brain, her muscles. Her computer counterbalances heavy on her spine."
